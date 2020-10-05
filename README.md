@@ -117,8 +117,8 @@ const fields = [
 - [x] Arrays
 - [x] JSON
 - [x] Change state of field
-- [ ] Fill payload
-- [ ] Form submit action
+- [x] Fill payload
+- [x] Form submit action
 - [ ] Default values
 - [ ] Input types
   - [ ] Date inputs

@@ -1,10 +1,22 @@
 import React from 'react'
 
-import { ExampleComponent } from 'react-form-from-json'
+import { Form } from 'react-form-from-json'
+import { fieldInterface } from 'react-form-from-json/dist/functions/interfaces'
 import 'react-form-from-json/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  const fields: fieldInterface[] = [
+    {
+      name: 'Dummy checkbox',
+      type: 'checkbox'
+    },
+    {
+      name: 'Dummy color',
+      type: 'color'
+    }
+  ]
+
+  return <Form fields={fields} />
 }
 
 export default App

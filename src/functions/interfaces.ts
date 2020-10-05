@@ -6,11 +6,12 @@ export interface FormInterface {
 export interface FieldPropInterface {
   name: string
   inputType: string
-  type: string
+  type: String | Boolean | Date | Number
 }
 
 export interface FieldInterface {
   name: string
   type: string
   handler: Function
+  inputType: string
 }

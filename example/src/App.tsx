@@ -13,37 +13,37 @@ const App = () => {
     {
       name: 'Dummy email',
       inputType: 'email',
-      type: 'text'
+      type: String
     },
     {
       name: 'Dummy number',
       inputType: 'number',
-      type: 'text'
+      type: String
     },
     {
       name: 'Dummy password',
       inputType: 'password',
-      type: 'text'
+      type: String
     },
     {
       name: 'Dummy search',
       inputType: 'search',
-      type: 'text'
+      type: String
     },
     {
       name: 'Dummy tel',
       inputType: 'tel',
-      type: 'text'
+      type: String
     },
     {
       name: 'Dummy text',
       inputType: 'text',
-      type: 'text'
+      type: String
     },
     {
       name: 'Dummy url',
-      inputType: 'url',
-      type: 'text'
+      inputType: 'checkbox',
+      type: Boolean
     }
   ]
 

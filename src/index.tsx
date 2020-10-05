@@ -23,18 +23,15 @@ export const Form = ({ fields, submitAction }: FormInterface) => {
       >
         {fields.length !== 0 &&
           fields.map((field: any, index: number) => {
-            if (field.type === 'text') {
-              return (
-                <TextField
-                  name={field.name}
-                  type={field.type}
-                  key={index}
-                  handler={handler}
-                />
-              )
-            } else {
-              return <p>Not yet implemented</p>
-            }
+            return (
+              <TextField
+                name={field.name}
+                type={field.type}
+                key={index}
+                handler={handler}
+                inputType={field.inputType}
+              />
+            )
           })}
         <button type='submit'>Submit</button>
       </form>

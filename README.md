@@ -64,7 +64,9 @@ const fields = [
 ]
 ```
 
-#### JSON (with example input types)
+#### JSON (with currently working input types)
+
+Full example json is in [`example\example-json.json`](https://github.com/johnathan-codes/react-form-from-json/blob/master/example/example-json.json)
 
 ```json
 {

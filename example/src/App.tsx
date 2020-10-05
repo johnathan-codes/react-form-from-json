@@ -42,7 +42,7 @@ const App = () => {
     },
     {
       name: 'Dummy url',
-      tyinputTypepe: 'url',
+      inputType: 'url',
       type: 'text'
     }
   ]

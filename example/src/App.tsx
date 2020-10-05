@@ -1,11 +1,10 @@
 import React from 'react'
 
 import { Form } from 'react-form-from-json'
-import { fieldInterface } from 'react-form-from-json/dist/functions/interfaces'
 import 'react-form-from-json/dist/index.css'
 
 const App = () => {
-  const fields: fieldInterface[] = [
+  const fields = [
     {
       name: 'Dummy checkbox',
       type: 'checkbox'

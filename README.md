@@ -35,7 +35,13 @@ const App = () => {
       setFields(res.data)
     })
   }, [])
-  return <Form fields={fields} />
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>, payload: {}) => {
+    e.preventDefault()
+    console.log('HandleSubmit -> payload', payload)
+  }
+
+  return <Form fields={fields} submitAction={handleSubmit} />
 }
 
 export default App
@@ -64,88 +70,39 @@ const fields = [
 {
   "fields": [
     {
-      "name": "Dummy checkbox",
-      "type": "checkbox"
-    },
-    {
-      "name": "Dummy color",
-      "type": "color"
-    },
-    {
-      "name": "Dummy date",
-      "type": "date"
-    },
-    {
-      "name": "Dummy datetime-local",
-      "type": "datetime-local"
-    },
-    {
       "name": "Dummy email",
-      "type": "email"
-    },
-    {
-      "name": "Dummy file",
-      "type": "file"
-    },
-    {
-      "name": "Dummy hidden",
-      "type": "hidden"
-    },
-    {
-      "name": "Dummy image",
-      "type": "image"
-    },
-    {
-      "name": "Dummy month",
-      "type": "month"
-    },
-    {
-      "name": "Dummy number",
-      "type": "number"
-    },
-    {
-      "name": "Dummy password",
-      "type": "password"
-    },
-    {
-      "name": "Dummy radio",
-      "type": "radio"
-    },
-    {
-      "name": "Dummy range",
-      "type": "range"
-    },
-    {
-      "name": "Dummy reset",
-      "type": "reset"
-    },
-    {
-      "name": "Dummy search",
-      "type": "search"
-    },
-    {
-      "name": "Dummy submit",
-      "type": "submit"
-    },
-    {
-      "name": "Dummy tel",
-      "type": "tel"
-    },
-    {
-      "name": "Dummy text",
+      "inputType": "email",
       "type": "text"
     },
     {
-      "name": "Dummy time",
-      "type": "time"
+      "name": "Dummy number",
+      "inputType": "number",
+      "type": "text"
+    },
+    {
+      "name": "Dummy password",
+      "inputType": "password",
+      "type": "text"
+    },
+    {
+      "name": "Dummy search",
+      "inputType": "search",
+      "type": "text"
+    },
+    {
+      "name": "Dummy tel",
+      "inputType": "tel",
+      "type": "text"
+    },
+    {
+      "name": "Dummy text",
+      "inputType": "text",
+      "type": "text"
     },
     {
       "name": "Dummy url",
-      "type": "url"
-    },
-    {
-      "name": "Dummy week",
-      "type": "week"
+      "tyinputTypepe": "url",
+      "type": "text"
     }
   ]
 }
@@ -159,7 +116,7 @@ const fields = [
 
 - [x] Arrays
 - [x] JSON
-- [ ] Change state of field
+- [x] Change state of field
 - [ ] Fill payload
 - [ ] Form submit action
 - [ ] Default values
@@ -176,18 +133,23 @@ const fields = [
     - [ ] File
     - [ ] Radio
     - [ ] Range
-  - [ ] Text
-    - [ ] Text
-    - [ ] Email
-    - [ ] URL
-    - [ ] Tel
-    - [ ] Number
-    - [ ] Password
-    - [ ] ~~Search~~
+  - [x] Text - basic text inputs
+    - [x] Text
+    - [x] Email
+    - [x] URL
+    - [x] Tel
+    - [x] Number
+    - [x] Password
+    - [x] ~~Search~~
   - [ ] MISC
     - [ ] ~~Hidden~~
     - [ ] ~~Reset~~
     - [ ] ~~Submit~~
+- [ ] (Optional) Validators
+  - [ ] Email
+  - [ ] Tel
+  - [ ] Password
+  - [ ] Number
 
 ## License
 

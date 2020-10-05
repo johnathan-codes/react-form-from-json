@@ -145,6 +145,12 @@ const fields = [
 #### Rendered
 ![rendered-form](https://user-images.githubusercontent.com/42937562/95061761-52772f80-06fc-11eb-8d62-acc3003eb2fe.png)
 
+# Roadmap
+- [x] Arrays
+- [x] JSON
+- [ ] Change state of field
+- [ ] Fill payload
+- [ ] Form submit action
 
 ## License
 

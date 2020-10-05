@@ -6,22 +6,35 @@
 
 ## Install
 
-```bash
-npm install --save react-form-from-json
+```
+npm i react-form-from-json
+```
+or
+```
+yarn add react-form-from-json
 ```
 
 ## Usage
+- Form works with following fields format
+```tsx
+const fields = [
+    {
+      name: 'Dummy checkbox',
+      type: 'checkbox'
+    },
+    {
+      name: 'Dummy color',
+      type: 'color'
+    }
+  ]
+```
 
 ```tsx
-import React, { Component } from 'react'
+import React from 'react'
+import Form from 'react-form-from-json'
 
-import MyComponent from 'react-form-from-json'
-import 'react-form-from-json/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const Example = () => {
+    return <Form fields={fields} />
 }
 ```
 

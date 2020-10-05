@@ -6,12 +6,32 @@ import 'react-form-from-json/dist/index.css'
 const App = () => {
   const fields = [
     {
-      name: 'Dummy checkbox',
-      type: 'checkbox'
+      name: 'Dummy email',
+      type: 'email'
     },
     {
-      name: 'Dummy color',
-      type: 'color'
+      name: 'Dummy number',
+      type: 'number'
+    },
+    {
+      name: 'Dummy password',
+      type: 'password'
+    },
+    {
+      name: 'Dummy search',
+      type: 'search'
+    },
+    {
+      name: 'Dummy tel',
+      type: 'tel'
+    },
+    {
+      name: 'Dummy text',
+      type: 'text'
+    },
+    {
+      name: 'Dummy url',
+      type: 'url'
     }
   ]
 

@@ -10,6 +10,7 @@ export interface FieldPropInterface {
     | BooleanConstructor
     | NumberConstructor
     | DateConstructor
+    | String
   inputType: string
 }
 
@@ -20,6 +21,7 @@ export interface FieldInterface {
     | BooleanConstructor
     | NumberConstructor
     | DateConstructor
+    | String
   inputType: string
   handler: Function
 }

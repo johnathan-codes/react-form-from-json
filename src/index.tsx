@@ -11,7 +11,7 @@ export const Form = ({ fields, submitAction }: FormInterface) => {
   }
 
   const fieldSelector = (field: FieldPropInterface, index: number) => {
-    if (field.type === String) {
+    if (field.type === String || field.type === 'text') {
       return (
         <TextField
           name={field.name}
@@ -21,7 +21,7 @@ export const Form = ({ fields, submitAction }: FormInterface) => {
           inputType={field.inputType}
         />
       )
-    } else if (field.type === Boolean) {
+    } else if (field.type === Boolean || field.type === 'boolean') {
       return (
         <CheckboxField
           name={field.name}

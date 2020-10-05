@@ -1,5 +1,4 @@
 import React, { FormEvent } from 'react'
-
 import { Form } from 'react-form-from-json'
 import 'react-form-from-json/dist/index.css'
 

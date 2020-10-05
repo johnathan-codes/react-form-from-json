@@ -1,12 +1,39 @@
 import React, { FormEvent, useState } from 'react'
+import CheckboxField from './components/CheckboxField'
 import TextField from './components/TextField'
-import { FormInterface } from './functions/interfaces'
+import { FieldPropInterface, FormInterface } from './types'
 
 export const Form = ({ fields, submitAction }: FormInterface) => {
   const [payload, setPayload] = useState({})
 
   const handler = (key: string, value: any) => {
     setPayload((prevPayload) => ({ ...prevPayload, [key]: value }))
+  }
+
+  const fieldSelector = (field: FieldPropInterface, index: number) => {
+    if (field.type === String) {
+      return (
+        <TextField
+          name={field.name}
+          type={field.type}
+          key={index}
+          handler={handler}
+          inputType={field.inputType}
+        />
+      )
+    } else if (field.type === Boolean) {
+      return (
+        <CheckboxField
+          name={field.name}
+          type={field.type}
+          key={index}
+          handler={handler}
+          inputType={field.inputType}
+        />
+      )
+    } else {
+      return <p key={index}>Not yet implemented</p>
+    }
   }
 
   return (
@@ -23,15 +50,7 @@ export const Form = ({ fields, submitAction }: FormInterface) => {
       >
         {fields.length !== 0 &&
           fields.map((field: any, index: number) => {
-            return (
-              <TextField
-                name={field.name}
-                type={field.type}
-                key={index}
-                handler={handler}
-                inputType={field.inputType}
-              />
-            )
+            return fieldSelector(field, index)
           })}
         <button type='submit'>Submit</button>
       </form>

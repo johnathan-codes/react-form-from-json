@@ -47,105 +47,7 @@ const App = () => {
 export default App
 ```
 
-#### Example code with array
-
-```tsx
-import React, { FormEvent } from 'react'
-import { Form } from 'react-form-from-json'
-import 'react-form-from-json/dist/index.css'
-
-const App = () => {
-  const handleSubmit = (e: FormEvent<HTMLFormElement>, payload: {}) => {
-    e.preventDefault()
-  }
-
-  const fields = [
-    {
-      name: 'Dummy email',
-      inputType: 'email',
-      type: String
-    },
-    {
-      name: 'Dummy number',
-      inputType: 'number',
-      type: String
-    },
-    {
-      name: 'Dummy password',
-      inputType: 'password',
-      type: String
-    },
-    {
-      name: 'Dummy search',
-      inputType: 'search',
-      type: String
-    },
-    {
-      name: 'Dummy tel',
-      inputType: 'tel',
-      type: String
-    },
-    {
-      name: 'Dummy text',
-      inputType: 'text',
-      type: String
-    },
-    {
-      name: 'Dummy url',
-      inputType: 'checkbox',
-      type: Boolean
-    }
-  ]
-
-  return <Form fields={fields} submitAction={handleSubmit} />
-}
-
-export default App
-```
-
 Form works with following fields formats
-
-#### Array
-
-```tsx
-const fields = [
-  {
-    name: 'Dummy email',
-    inputType: 'email',
-    type: String
-  },
-  {
-    name: 'Dummy number',
-    inputType: 'number',
-    type: String
-  },
-  {
-    name: 'Dummy password',
-    inputType: 'password',
-    type: String
-  },
-  {
-    name: 'Dummy search',
-    inputType: 'search',
-    type: String
-  },
-  {
-    name: 'Dummy tel',
-    inputType: 'tel',
-    type: String
-  },
-  {
-    name: 'Dummy text',
-    inputType: 'text',
-    type: String
-  },
-  {
-    name: 'Dummy url',
-    inputType: 'checkbox',
-    type: Boolean
-  }
-]
-```
 
 #### JSON (with currently working input types)
 
@@ -204,7 +106,7 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
 
 ## Roadmap
 
-- [x] Arrays
+- [ ] ~~Arrays~~
 - [x] JSON
 - [x] Change state of field
 - [x] Fill payload

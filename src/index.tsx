@@ -11,28 +11,27 @@ export const Form = ({ fields, submitAction }: FormInterface) => {
   }
 
   const fieldSelector = (field: FieldPropInterface, index: number) => {
-    if (field.type === String || field.type === 'text') {
-      return (
-        <TextField
-          name={field.name}
-          type={field.type}
-          key={index}
-          handler={handler}
-          inputType={field.inputType}
-        />
-      )
-    } else if (field.type === Boolean || field.type === 'boolean') {
-      return (
-        <CheckboxField
-          name={field.name}
-          type={field.type}
-          key={index}
-          handler={handler}
-          inputType={field.inputType}
-        />
-      )
-    } else {
-      return <p key={index}>Not yet implemented</p>
+    switch (field.type) {
+      case 'boolean':
+        return (
+          <CheckboxField
+            name={field.name}
+            type={field.inputType}
+            key={index}
+            handler={handler}
+          />
+        )
+      case 'text':
+        return (
+          <TextField
+            name={field.name}
+            type={field.inputType}
+            key={index}
+            handler={handler}
+          />
+        )
+      default:
+        return <p key={index}>Not yet implemented</p>
     }
   }
 

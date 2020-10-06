@@ -5,23 +5,12 @@ export interface FormInterface {
 
 export interface FieldPropInterface {
   name: string
-  type:
-    | StringConstructor
-    | BooleanConstructor
-    | NumberConstructor
-    | DateConstructor
-    | String
+  type: string
   inputType: string
 }
 
 export interface FieldInterface {
   name: string
-  type:
-    | StringConstructor
-    | BooleanConstructor
-    | NumberConstructor
-    | DateConstructor
-    | String
-  inputType: string
+  type: string
   handler: Function
 }

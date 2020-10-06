@@ -1,50 +1,22 @@
-import React, { FormEvent } from 'react'
+import React, { FormEvent, useEffect, useState } from 'react'
 import { Form } from 'react-form-from-json'
+import get from 'axios'
 import 'react-form-from-json/dist/index.css'
 
 const App = () => {
+  const [fields, setFields] = useState([])
   const handleSubmit = (e: FormEvent<HTMLFormElement>, payload: {}) => {
     e.preventDefault()
     console.log('HandleSubmit -> payload', payload)
   }
 
-  const fields = [
-    {
-      name: 'Dummy email',
-      inputType: 'email',
-      type: String
-    },
-    {
-      name: 'Dummy number',
-      inputType: 'number',
-      type: String
-    },
-    {
-      name: 'Dummy password',
-      inputType: 'password',
-      type: String
-    },
-    {
-      name: 'Dummy search',
-      inputType: 'search',
-      type: String
-    },
-    {
-      name: 'Dummy tel',
-      inputType: 'tel',
-      type: String
-    },
-    {
-      name: 'Dummy text',
-      inputType: 'text',
-      type: String
-    },
-    {
-      name: 'Dummy url',
-      inputType: 'checkbox',
-      type: Boolean
-    }
-  ]
+  useEffect(() => {
+    get('http://localhost:3100/fields', {
+      method: 'GET'
+    }).then((res: any) => {
+      setFields(res.data)
+    })
+  }, [])
 
   return <Form fields={fields} submitAction={handleSubmit} />
 }

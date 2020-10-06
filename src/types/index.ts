@@ -18,11 +18,21 @@ export type FieldPropInterface = {
       type: 'select'
       values: SelectValue[]
     }
+  | {
+      type: 'textarea'
+      rows?: number
+      cols?: number
+    }
 )
 
-export interface FieldInterface {
+export interface TextFieldInterface {
   name: string
   type: string
+  handler: Function
+}
+
+export interface CheckboxFieldInterface {
+  name: string
   handler: Function
 }
 
@@ -30,6 +40,13 @@ export interface SelectFieldInterface {
   name: string
   handler: Function
   values: SelectValue[]
+}
+
+export interface TextAreaInterface {
+  name: string
+  handler: Function
+  rows?: number
+  cols?: number
 }
 
 export type SelectValue = {

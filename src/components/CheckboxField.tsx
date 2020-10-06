@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { FieldInterface } from '../types'
+import { CheckboxFieldInterface } from '../types'
 
-const CheckboxField: React.FC<FieldInterface> = ({ name, handler }) => {
+const CheckboxField: React.FC<CheckboxFieldInterface> = ({ name, handler }) => {
   const [checked, setChecked] = useState(false)
   const handleOnChange = () => {
     setChecked((prevChecked: boolean) => !prevChecked)

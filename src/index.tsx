@@ -1,6 +1,7 @@
 import React, { FormEvent, useState } from 'react'
 import CheckboxField from './components/CheckboxField'
 import SelectField from './components/SelectField'
+import TextAreaField from './components/TextAreaField'
 import TextField from './components/TextField'
 import { FieldPropInterface, FormInterface } from './types'
 
@@ -14,14 +15,7 @@ export const Form = ({ fields, submitAction }: FormInterface) => {
   const fieldSelector = (field: FieldPropInterface, index: number) => {
     switch (field.type) {
       case 'boolean':
-        return (
-          <CheckboxField
-            name={field.name}
-            type={field.inputType}
-            key={index}
-            handler={handler}
-          />
-        )
+        return <CheckboxField name={field.name} key={index} handler={handler} />
       case 'string':
         return (
           <TextField
@@ -36,6 +30,16 @@ export const Form = ({ fields, submitAction }: FormInterface) => {
           <SelectField
             name={field.name}
             values={field.values}
+            handler={handler}
+            key={index}
+          />
+        )
+      case 'textarea':
+        return (
+          <TextAreaField
+            name={field.name}
+            cols={field.cols}
+            rows={field.rows}
             handler={handler}
             key={index}
           />

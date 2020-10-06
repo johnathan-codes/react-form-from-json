@@ -117,6 +117,16 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
           "value": "Value 4"
         }
       ]
+    },
+    {
+      "name": "Dummy textarea",
+      "type": "textarea",
+      "rows": 2,
+      "cols": 20
+    },
+    {
+      "name": "Dummy textarea no cols, no rows",
+      "type": "textarea"
     }
   ]
 }
@@ -148,14 +158,15 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
     - [ ] File
     - [ ] Radio
     - [ ] Range
-  - [x] Text - basic text inputs
+  - [x] Text inputs
     - [x] Text
     - [x] Email
     - [x] URL
     - [x] Tel
     - [x] Number
     - [x] Password
-    - [x] ~~Search~~
+    - [x] TextArea
+    - [ ] ~~Search~~
   - [ ] MISC
     - [ ] ~~Hidden~~
     - [ ] ~~Reset~~

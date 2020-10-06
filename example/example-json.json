@@ -63,6 +63,16 @@
       ]
     },
     {
+      "name": "Dummy textarea",
+      "type": "textarea",
+      "rows": 4,
+      "cols": 20
+    },
+    {
+      "name": "Dummy textarea no cols, no rows",
+      "type": "textarea"
+    },
+    {
       "name": "Dummy color",
       "inputType": "color"
     },

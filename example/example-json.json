@@ -3,40 +3,41 @@
     {
       "name": "Dummy email",
       "inputType": "email",
-      "type": "text"
+      "type": "string"
     },
     {
       "name": "Dummy number",
       "inputType": "number",
-      "type": "text"
+      "type": "string"
     },
     {
       "name": "Dummy password",
       "inputType": "password",
-      "type": "text"
+      "type": "string"
     },
     {
       "name": "Dummy search",
       "inputType": "search",
-      "type": "text"
+      "type": "string"
     },
     {
       "name": "Dummy tel",
       "inputType": "tel",
-      "type": "text"
+      "type": "string"
     },
     {
       "name": "Dummy text",
       "inputType": "text",
-      "type": "text"
+      "type": "string"
     },
     {
       "name": "Dummy url",
       "inputType": "url",
-      "type": "text"
+      "type": "string"
     },
     {
       "name": "Dummy checkbox",
+      "type": "boolean",
       "inputType": "checkbox"
     },
     {

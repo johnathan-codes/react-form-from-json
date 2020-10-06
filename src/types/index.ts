@@ -3,11 +3,18 @@ export interface FormInterface {
   submitAction: Function
 }
 
-export interface FieldPropInterface {
+export type FieldPropInterface = {
   name: string
-  type: string
-  inputType: string
-}
+} & (
+  | {
+      type: 'string'
+      inputType: string
+    }
+  | {
+      type: 'boolean'
+      inputType: 'checkbox'
+    }
+)
 
 export interface FieldInterface {
   name: string

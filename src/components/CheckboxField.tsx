@@ -13,12 +13,12 @@ const CheckboxField: React.FC<FieldInterface> = ({ name, handler }) => {
 
   return (
     <div className='checkbox-inner'>
+      <span className='notice-text'>{name}</span>
       <input
         type='checkbox'
         className='input-checkbox'
         onChange={handleOnChange}
       />
-      <span className='notice-text'>{name}</span>
     </div>
   )
 }

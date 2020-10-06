@@ -21,7 +21,7 @@ export const Form = ({ fields, submitAction }: FormInterface) => {
             handler={handler}
           />
         )
-      case 'text':
+      case 'string':
         return (
           <TextField
             name={field.name}

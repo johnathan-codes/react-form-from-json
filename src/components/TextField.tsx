@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useState } from 'react'
 import { FieldInterface } from '../types'
 
-const TextField: React.FC<FieldInterface> = ({ name, handler, inputType }) => {
+const TextField: React.FC<FieldInterface> = ({ name, handler, type }) => {
   const [value, setValue] = useState('')
 
   const handleOnChane = (e: ChangeEvent<HTMLInputElement>) => {
@@ -13,7 +13,7 @@ const TextField: React.FC<FieldInterface> = ({ name, handler, inputType }) => {
     <div>
       <label htmlFor={name}>{name}</label>
       <input
-        type={inputType}
+        type={type}
         id={name}
         onChange={handleOnChane}
         value={value}

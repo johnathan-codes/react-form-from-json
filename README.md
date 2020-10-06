@@ -88,13 +88,35 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
     },
     {
       "name": "Dummy url",
-      "tyinputTypepe": "url",
+      "inputType": "url",
       "type": "text"
     },
     {
       "name": "Dummy url",
       "inputType": "checkbox",
       "type": "boolean"
+    },
+    {
+      "name": "Dummy select",
+      "type": "select",
+      "values": [
+        {
+          "key": "key-1",
+          "value": "Value 1"
+        },
+        {
+          "key": "key-2",
+          "value": "Value 2"
+        },
+        {
+          "key": "key-3",
+          "value": "Value 3"
+        },
+        {
+          "key": "key-4",
+          "value": "Value 4"
+        }
+      ]
     }
   ]
 }
@@ -120,6 +142,7 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
     - [ ] Time
     - [ ] Week
   - [ ] Selectors
+    - [x] Select
     - [x] Checkbox
     - [ ] Color
     - [ ] File

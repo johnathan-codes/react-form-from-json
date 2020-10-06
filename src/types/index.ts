@@ -14,10 +14,25 @@ export type FieldPropInterface = {
       type: 'boolean'
       inputType: 'checkbox'
     }
+  | {
+      type: 'select'
+      values: SelectValue[]
+    }
 )
 
 export interface FieldInterface {
   name: string
   type: string
   handler: Function
+}
+
+export interface SelectFieldInterface {
+  name: string
+  handler: Function
+  values: SelectValue[]
+}
+
+export type SelectValue = {
+  key: string
+  value: string
 }

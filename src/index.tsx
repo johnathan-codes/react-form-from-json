@@ -1,5 +1,6 @@
 import React, { FormEvent, useState } from 'react'
 import CheckboxField from './components/CheckboxField'
+import SelectField from './components/SelectField'
 import TextField from './components/TextField'
 import { FieldPropInterface, FormInterface } from './types'
 
@@ -28,6 +29,15 @@ export const Form = ({ fields, submitAction }: FormInterface) => {
             type={field.inputType}
             key={index}
             handler={handler}
+          />
+        )
+      case 'select':
+        return (
+          <SelectField
+            name={field.name}
+            values={field.values}
+            handler={handler}
+            key={index}
           />
         )
       default:

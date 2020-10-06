@@ -23,6 +23,11 @@ export type FieldPropInterface = {
       rows?: number
       cols?: number
     }
+  | {
+      type: 'range'
+      min: number
+      max: number
+    }
 )
 
 export interface TextFieldInterface {
@@ -36,10 +41,11 @@ export interface CheckboxFieldInterface {
   handler: Function
 }
 
-export interface SelectFieldInterface {
+export interface RangeFieldInterface {
   name: string
+  min: number
+  max: number
   handler: Function
-  values: SelectValue[]
 }
 
 export interface TextAreaInterface {
@@ -47,6 +53,12 @@ export interface TextAreaInterface {
   handler: Function
   rows?: number
   cols?: number
+}
+
+export interface SelectFieldInterface {
+  name: string
+  handler: Function
+  values: SelectValue[]
 }
 
 export type SelectValue = {

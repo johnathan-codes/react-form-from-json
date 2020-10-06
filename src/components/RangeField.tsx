@@ -1,7 +1,12 @@
 import React, { ChangeEvent, useState } from 'react'
-import { TextFieldInterface } from '../types'
+import { RangeFieldInterface } from '../types'
 
-const TextField: React.FC<TextFieldInterface> = ({ name, handler, type }) => {
+const RangeField: React.FC<RangeFieldInterface> = ({
+  name,
+  min,
+  max,
+  handler
+}) => {
   const [value, setValue] = useState('')
 
   const handleOnChane = (e: ChangeEvent<HTMLInputElement>) => {
@@ -13,13 +18,15 @@ const TextField: React.FC<TextFieldInterface> = ({ name, handler, type }) => {
     <div>
       <label htmlFor={name}>{name}</label>
       <input
-        type={type}
+        type='range'
         id={name}
         onChange={handleOnChane}
         value={value}
+        min={min}
+        max={max}
       ></input>
     </div>
   )
 }
 
-export default TextField
+export default RangeField

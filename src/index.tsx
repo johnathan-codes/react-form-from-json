@@ -1,5 +1,6 @@
 import React, { FormEvent, useState } from 'react'
 import CheckboxField from './components/CheckboxField'
+import RangeField from './components/RangeField'
 import SelectField from './components/SelectField'
 import TextAreaField from './components/TextAreaField'
 import TextField from './components/TextField'
@@ -40,6 +41,16 @@ export const Form = ({ fields, submitAction }: FormInterface) => {
             name={field.name}
             cols={field.cols}
             rows={field.rows}
+            handler={handler}
+            key={index}
+          />
+        )
+      case 'range':
+        return (
+          <RangeField
+            name={field.name}
+            min={field.min}
+            max={field.max}
             handler={handler}
             key={index}
           />

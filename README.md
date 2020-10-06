@@ -158,6 +158,8 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
     - [ ] File
     - [ ] Radio
     - [ ] Range
+      - [x] Min - Max
+      - [ ] [Datalist](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range#A_range_control_with_hash_marks_and_labels)
   - [x] Text inputs
     - [x] Text
     - [x] Email

@@ -73,6 +73,12 @@
       "type": "textarea"
     },
     {
+      "name": "Dummy range",
+      "type": "range",
+      "min": 0,
+      "max": 10
+    },
+    {
       "name": "Dummy color",
       "inputType": "color"
     },
@@ -103,10 +109,6 @@
     {
       "name": "Dummy radio",
       "inputType": "radio"
-    },
-    {
-      "name": "Dummy range",
-      "inputType": "range"
     },
     {
       "name": "Dummy reset",

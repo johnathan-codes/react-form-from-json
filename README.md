@@ -16,6 +16,11 @@ or
 yarn add react-form-from-json
 ```
 
+## Dev
+
+In root run with concurrently (which is installed globally `npm i -g concurrently`)
+`concurrently "yarn start" "cd example && yarn start" "cd exaple && json-server --watch example-json.json --port 3100"`
+
 ## Usage
 
 #### Example code with axios request (response json shown below)
@@ -127,6 +132,20 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
     {
       "name": "Dummy textarea no cols, no rows",
       "type": "textarea"
+    },
+    {
+      "name": "Dummy radio",
+      "type": "radio",
+      "values": [
+        {
+          "key": "rad1",
+          "value": "Value 1"
+        },
+        {
+          "key": "rad2",
+          "value": "Value 2"
+        }
+      ]
     }
   ]
 }
@@ -156,7 +175,7 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
     - [x] Checkbox
     - [ ] Color
     - [ ] File
-    - [ ] Radio
+    - [x] Radio
     - [ ] Range
       - [x] Min - Max
       - [ ] [Datalist](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range#A_range_control_with_hash_marks_and_labels)

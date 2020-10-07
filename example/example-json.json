@@ -79,6 +79,20 @@
       "max": 10
     },
     {
+      "name": "Dummy radio",
+      "type": "radio",
+      "values": [
+        {
+          "key": "rad1",
+          "value": "Value 1"
+        },
+        {
+          "key": "rad2",
+          "value": "Value 2"
+        }
+      ]
+    },
+    {
       "name": "Dummy color",
       "inputType": "color"
     },
@@ -106,10 +120,7 @@
       "name": "Dummy month",
       "inputType": "month"
     },
-    {
-      "name": "Dummy radio",
-      "inputType": "radio"
-    },
+
     {
       "name": "Dummy reset",
       "inputType": "reset"

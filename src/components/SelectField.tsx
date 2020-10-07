@@ -7,7 +7,6 @@ const SelectField: React.FC<SelectFieldInterface> = ({
   handler
 }) => {
   const [value, setValue] = useState<string>(values[0].key)
-  console.log('Selected value', value)
 
   const handleOnChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setValue(e.target.value)

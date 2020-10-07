@@ -28,6 +28,10 @@ export type FieldPropInterface = {
       min: number
       max: number
     }
+  | {
+      type: 'radio'
+      values: SelectValue[]
+    }
 )
 
 export interface TextFieldInterface {
@@ -48,17 +52,23 @@ export interface RangeFieldInterface {
   handler: Function
 }
 
+export interface RadioFieldInterface {
+  name: string
+  values: SelectValue[]
+  handler: Function
+}
+
 export interface TextAreaInterface {
   name: string
-  handler: Function
   rows?: number
   cols?: number
+  handler: Function
 }
 
 export interface SelectFieldInterface {
   name: string
-  handler: Function
   values: SelectValue[]
+  handler: Function
 }
 
 export type SelectValue = {

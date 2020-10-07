@@ -19,7 +19,7 @@ yarn add react-form-from-json
 ## Dev
 
 In root run with concurrently (which is installed globally `npm i -g concurrently`)
-`concurrently "yarn start" "cd example && yarn start" "cd exaple && json-server --watch example-json.json --port 3100"`
+`concurrently "yarn start" "cd example && yarn start" "cd example && json-server --watch example-json.json --port 3100"`
 
 ## Usage
 
@@ -170,6 +170,8 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
 - [ ] Input types
   - [ ] Date inputs
     - [ ] Date
+      - [ ] Formats
+      - [ ] Min - Max
     - [ ] Datetime local
     - [ ] Month
     - [ ] Time

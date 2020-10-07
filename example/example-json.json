@@ -97,13 +97,15 @@
       "type": "file"
     },
     {
+      "name": "Dummy date",
+      "type": "date",
+      "subtype": "date"
+    },
+    {
       "name": "Dummy color",
       "inputType": "color"
     },
-    {
-      "name": "Dummy date",
-      "inputType": "date"
-    },
+
     {
       "name": "Dummy datetime-local",
       "inputType": "datetime-local"

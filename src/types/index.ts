@@ -35,6 +35,10 @@ export type FieldPropInterface = {
   | {
       type: 'file'
     }
+  | {
+      type: 'date'
+      subtype: string
+    }
 )
 
 export interface TextFieldInterface {
@@ -70,6 +74,12 @@ export interface TextAreaInterface {
   name: string
   rows?: number
   cols?: number
+  handler: Function
+}
+
+export interface DateFieldInterface {
+  name: string
+  subtype: string
   handler: Function
 }
 

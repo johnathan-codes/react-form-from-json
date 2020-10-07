@@ -93,6 +93,10 @@
       ]
     },
     {
+      "name": "Dummy file",
+      "type": "file"
+    },
+    {
       "name": "Dummy color",
       "inputType": "color"
     },
@@ -103,10 +107,6 @@
     {
       "name": "Dummy datetime-local",
       "inputType": "datetime-local"
-    },
-    {
-      "name": "Dummy file",
-      "inputType": "file"
     },
     {
       "name": "Dummy hidden",

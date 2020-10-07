@@ -8,6 +8,11 @@ const App = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>, payload: {}) => {
     e.preventDefault()
     console.log('HandleSubmit -> payload', payload)
+    //FIY Create new form data
+    // let formData = new FormData()
+    // Object.keys(payload).forEach((key) => {
+    //   formData.append(key, payload[key])
+    // })
   }
 
   useEffect(() => {

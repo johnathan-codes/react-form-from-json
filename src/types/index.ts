@@ -32,6 +32,9 @@ export type FieldPropInterface = {
       type: 'radio'
       values: SelectValue[]
     }
+  | {
+      type: 'file'
+    }
 )
 
 export interface TextFieldInterface {
@@ -55,6 +58,11 @@ export interface RangeFieldInterface {
 export interface RadioFieldInterface {
   name: string
   values: SelectValue[]
+  handler: Function
+}
+
+export interface FileFieldInterface {
+  name: string
   handler: Function
 }
 

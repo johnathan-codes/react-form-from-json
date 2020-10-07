@@ -1,5 +1,6 @@
 import React, { FormEvent, useState } from 'react'
 import CheckboxField from './components/CheckboxField'
+import FileField from './components/FileField'
 import RadioField from './components/RadioField'
 import RangeField from './components/RangeField'
 import SelectField from './components/SelectField'
@@ -65,6 +66,8 @@ export const Form = ({ fields, submitAction }: FormInterface) => {
             key={index}
           />
         )
+      case 'file':
+        return <FileField name={field.name} handler={handler} key={index} />
       default:
         return <p key={index}>Not yet implemented</p>
     }

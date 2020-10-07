@@ -146,6 +146,10 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
           "value": "Value 2"
         }
       ]
+    },
+    {
+      "name": "Dummy file",
+      "type": "file"
     }
   ]
 }
@@ -174,7 +178,7 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
     - [x] Select
     - [x] Checkbox
     - [ ] Color
-    - [ ] File
+    - [x] File
     - [x] Radio
     - [ ] Range
       - [x] Min - Max

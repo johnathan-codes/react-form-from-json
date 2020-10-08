@@ -1,11 +1,7 @@
 import React, { ChangeEvent, useState } from 'react'
 import { SelectFieldInterface } from '../types'
 
-const SelectField: React.FC<SelectFieldInterface> = ({
-  name,
-  values,
-  handler
-}) => {
+const SelectField = ({ name, values, handler }: SelectFieldInterface) => {
   const [value, setValue] = useState<string>(values[0].key)
 
   const handleOnChange = (e: ChangeEvent<HTMLSelectElement>) => {

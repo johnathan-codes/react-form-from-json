@@ -1,12 +1,7 @@
 import React, { ChangeEvent, useState } from 'react'
 import { RangeFieldInterface } from '../types'
 
-const RangeField: React.FC<RangeFieldInterface> = ({
-  name,
-  min,
-  max,
-  handler
-}) => {
+const RangeField = ({ name, min, max, handler }: RangeFieldInterface) => {
   const [value, setValue] = useState('')
 
   const handleOnChane = (e: ChangeEvent<HTMLInputElement>) => {

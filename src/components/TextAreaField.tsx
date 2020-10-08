@@ -1,12 +1,7 @@
 import React, { ChangeEvent, useState } from 'react'
 import { TextAreaInterface } from '../types'
 
-const TextAreaField: React.FC<TextAreaInterface> = ({
-  name,
-  handler,
-  rows,
-  cols
-}) => {
+const TextAreaField = ({ name, handler, rows, cols }: TextAreaInterface) => {
   const [value, setValue] = useState('')
 
   const handleOnChane = (e: ChangeEvent<HTMLTextAreaElement>) => {

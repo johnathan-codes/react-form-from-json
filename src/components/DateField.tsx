@@ -1,10 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { DateFieldInterface } from '../types'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 
 const DateField = ({ name, min, max, format, handler }: DateFieldInterface) => {
   const [value, setValue] = useState(new Date())
+
+  useEffect(() => {
+    if (min !== undefined) {
+      if (new Date(min) > new Date()) {
+        setValue(new Date(min))
+      }
+    }
+  }, [])
 
   return (
     <div>

@@ -100,7 +100,7 @@
       "name": "Dummy date",
       "type": "date",
       "subtype": "date",
-      "min": "2020-10-12",
+      "min": "2020-10-05",
       "max": "2020-11-01",
       "format": "dd. MM. yyyy"
     },

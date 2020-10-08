@@ -1,9 +1,6 @@
 import React, { FormEvent, useEffect, useState } from 'react'
 import { Form } from 'react-form-from-json'
 import get from 'axios'
-import 'react-form-from-json/dist/index.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './datepicker.css'
 
 const App = () => {
   const [fields, setFields] = useState([])

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { DateFieldInterface } from '../types'
 import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
 
 const DateField = ({ name, handler }: DateFieldInterface) => {
   const [value, setValue] = useState(new Date())

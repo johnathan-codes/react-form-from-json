@@ -172,10 +172,10 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
     - [ ] Date
       - [ ] Formats
       - [ ] Min - Max
-    - [ ] Datetime local
-    - [ ] Month
-    - [ ] Time
-    - [ ] Week
+    - [ ] ~~Datetime local~~
+    - [ ] ~~Month~~
+    - [ ] ~~Time~~
+    - [ ] ~~Week~~
   - [ ] Selectors
     - [x] Select
     - [x] Checkbox

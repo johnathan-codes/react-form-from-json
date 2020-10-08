@@ -24,7 +24,7 @@ export const Form = ({ fields, submitAction }: FormInterface) => {
         return (
           <TextField
             name={field.name}
-            type={field.inputType}
+            type={field.subtype}
             key={index}
             handler={handler}
           />

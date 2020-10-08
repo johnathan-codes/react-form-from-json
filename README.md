@@ -63,42 +63,42 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
   "fields": [
     {
       "name": "Dummy email",
-      "inputType": "email",
+      "subtype": "email",
       "type": "text"
     },
     {
       "name": "Dummy number",
-      "inputType": "number",
+      "subtype": "number",
       "type": "text"
     },
     {
       "name": "Dummy password",
-      "inputType": "password",
+      "subtype": "password",
       "type": "text"
     },
     {
       "name": "Dummy search",
-      "inputType": "search",
+      "subtype": "search",
       "type": "text"
     },
     {
       "name": "Dummy tel",
-      "inputType": "tel",
+      "subtype": "tel",
       "type": "text"
     },
     {
       "name": "Dummy text",
-      "inputType": "text",
+      "subtype": "text",
       "type": "text"
     },
     {
       "name": "Dummy url",
-      "inputType": "url",
+      "subtype": "url",
       "type": "text"
     },
     {
       "name": "Dummy url",
-      "inputType": "checkbox",
+      "subtype": "checkbox",
       "type": "boolean"
     },
     {
@@ -158,6 +158,11 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
       "min": "2020-10-05",
       "max": "2020-11-01",
       "format": "dd. MM. yyyy"
+    },
+    {
+      "name": "Dummy color",
+      "type": "string",
+      "subtype": "color"
     }
   ]
 }
@@ -183,10 +188,6 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
       - [ ] Exclude dates
       - [ ] Include dates
       - [ ] Filter dates
-    - [ ] ~~Datetime local~~
-    - [ ] ~~Month~~
-    - [ ] ~~Time~~
-    - [ ] ~~Week~~
   - [ ] Selectors
     - [x] Select
     - [x] Checkbox

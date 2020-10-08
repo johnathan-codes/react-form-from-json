@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useState } from 'react'
 import { TextFieldInterface } from '../types'
 
-const TextField: React.FC<TextFieldInterface> = ({ name, handler, type }) => {
+const TextField = ({ name, handler, type }: TextFieldInterface) => {
   const [value, setValue] = useState('')
 
   const handleOnChane = (e: ChangeEvent<HTMLInputElement>) => {

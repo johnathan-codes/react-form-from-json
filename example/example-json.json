@@ -2,42 +2,42 @@
   "fields": [
     {
       "name": "Dummy email",
-      "inputType": "email",
+      "subtype": "email",
       "type": "string"
     },
     {
       "name": "Dummy number",
-      "inputType": "number",
+      "subtype": "number",
       "type": "string"
     },
     {
       "name": "Dummy password",
-      "inputType": "password",
+      "subtype": "password",
       "type": "string"
     },
     {
       "name": "Dummy search",
-      "inputType": "search",
+      "subtype": "search",
       "type": "string"
     },
     {
       "name": "Dummy tel",
-      "inputType": "tel",
+      "subtype": "tel",
       "type": "string"
     },
     {
       "name": "Dummy text",
-      "inputType": "text",
+      "subtype": "text",
       "type": "string"
     },
     {
       "name": "Dummy url",
-      "inputType": "url",
+      "subtype": "url",
       "type": "string"
     },
     {
       "name": "Dummy checkbox",
-      "inputType": "checkbox",
+      "subtype": "checkbox",
       "type": "boolean"
     },
     {
@@ -106,41 +106,41 @@
     },
     {
       "name": "Dummy color",
-      "inputType": "color"
+      "type": "string",
+      "subtype": "color"
     },
-
     {
       "name": "Dummy datetime-local",
-      "inputType": "datetime-local"
+      "subtype": "datetime-local"
     },
     {
       "name": "Dummy hidden",
-      "inputType": "hidden"
+      "subtype": "hidden"
     },
     {
       "name": "Dummy image",
-      "inputType": "image"
+      "subtype": "image"
     },
     {
       "name": "Dummy month",
-      "inputType": "month"
+      "subtype": "month"
     },
 
     {
       "name": "Dummy reset",
-      "inputType": "reset"
+      "subtype": "reset"
     },
     {
       "name": "Dummy submit",
-      "inputType": "submit"
+      "subtype": "submit"
     },
     {
       "name": "Dummy time",
-      "inputType": "time"
+      "subtype": "time"
     },
     {
       "name": "Dummy week",
-      "inputType": "week"
+      "subtype": "week"
     }
   ]
 }

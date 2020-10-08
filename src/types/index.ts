@@ -8,11 +8,11 @@ export type FieldPropInterface = {
 } & (
   | {
       type: 'string'
-      inputType: string
+      subtype: string
     }
   | {
       type: 'boolean'
-      inputType: 'checkbox'
+      subtype: 'checkbox'
     }
   | {
       type: 'select'

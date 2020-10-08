@@ -37,7 +37,10 @@ export type FieldPropInterface = {
     }
   | {
       type: 'date'
-      subtype: string
+      // subtype: string
+      min?: string
+      max?: string
+      format: string
     }
 )
 
@@ -79,7 +82,10 @@ export interface TextAreaInterface {
 
 export interface DateFieldInterface {
   name: string
-  subtype: string
+  // subtype: string
+  min?: string
+  max?: string
+  format: string
   handler: Function
 }
 

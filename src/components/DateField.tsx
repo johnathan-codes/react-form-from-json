@@ -3,9 +3,8 @@ import { DateFieldInterface } from '../types'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 
-const DateField = ({ name, handler }: DateFieldInterface) => {
+const DateField = ({ name, min, max, format, handler }: DateFieldInterface) => {
   const [value, setValue] = useState(new Date())
-  console.log('DateField -> value', value)
 
   return (
     <div>
@@ -14,11 +13,12 @@ const DateField = ({ name, handler }: DateFieldInterface) => {
         locale='sk'
         selected={value}
         onChange={(date: Date) => {
-          if (date !== null) {
-            setValue(date)
-            handler(name, date)
-          }
+          setValue(date)
+          handler(name, date)
         }}
+        dateFormat={format}
+        {...(min !== undefined ? { minDate: new Date(min) } : {})}
+        {...(max !== undefined ? { maxDate: new Date(max) } : {})}
       />
     </div>
   )

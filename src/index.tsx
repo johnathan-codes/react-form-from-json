@@ -73,7 +73,10 @@ export const Form = ({ fields, submitAction }: FormInterface) => {
         return (
           <DateField
             name={field.name}
-            subtype={field.subtype}
+            // subtype={field.subtype}
+            min={field.min}
+            max={field.max}
+            format={field.format}
             handler={handler}
             key={index}
           />

@@ -99,7 +99,10 @@
     {
       "name": "Dummy date",
       "type": "date",
-      "subtype": "date"
+      "subtype": "date",
+      "min": "2020-10-12",
+      "max": "2020-11-01",
+      "format": "dd. MM. yyyy"
     },
     {
       "name": "Dummy color",

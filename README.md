@@ -150,6 +150,14 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
     {
       "name": "Dummy file",
       "type": "file"
+    },
+    {
+      "name": "Dummy date",
+      "type": "date",
+      "subtype": "date",
+      "min": "2020-10-05",
+      "max": "2020-11-01",
+      "format": "dd. MM. yyyy"
     }
   ]
 }
@@ -169,9 +177,12 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
 - [ ] Default values
 - [ ] Input types
   - [ ] Date inputs
-    - [ ] Date
-      - [ ] Formats
-      - [ ] Min - Max
+    - [x] Date
+      - [x] Formats
+      - [x] Min - Max
+      - [ ] Exclude dates
+      - [ ] Include dates
+      - [ ] Filter dates
     - [ ] ~~Datetime local~~
     - [ ] ~~Month~~
     - [ ] ~~Time~~

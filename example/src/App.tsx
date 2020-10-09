@@ -3,7 +3,11 @@ import { Form } from 'react-form-from-json'
 import get from 'axios'
 
 const App = () => {
-  const [fields, setFields] = useState([])
+  const [form, setForm] = useState({
+    name: '',
+    fields: []
+  })
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>, payload: {}) => {
     e.preventDefault()
     console.log('HandleSubmit -> payload', payload)
@@ -15,14 +19,14 @@ const App = () => {
   }
 
   useEffect(() => {
-    get('http://localhost:3100/fields', {
+    get('http://localhost:3100/form', {
       method: 'GET'
     }).then((res: any) => {
-      setFields(res.data)
+      setForm(res.data)
     })
   }, [])
 
-  return <Form fields={fields} submitAction={handleSubmit} />
+  return <Form form={form} submitAction={handleSubmit} />
 }
 
 export default App

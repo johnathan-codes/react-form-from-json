@@ -32,7 +32,10 @@ import get from 'axios'
 import { Form } from 'react-form-from-json'
 
 const App = () => {
-  const [fields, setFields] = useState([])
+  const [form, setForm] = useState({
+    name: '',
+    fields: []
+  })
   useEffect(() => {
     get(url, {
       method: 'GET'
@@ -46,7 +49,7 @@ const App = () => {
     console.log('HandleSubmit -> payload', payload)
   }
 
-  return <Form fields={fields} submitAction={handleSubmit} />
+  return <Form form={form} submitAction={handleSubmit} />
 }
 
 export default App
@@ -60,111 +63,120 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
 
 ```json
 {
-  "fields": [
-    {
-      "name": "Dummy email",
-      "subtype": "email",
-      "type": "text"
-    },
-    {
-      "name": "Dummy number",
-      "subtype": "number",
-      "type": "text"
-    },
-    {
-      "name": "Dummy password",
-      "subtype": "password",
-      "type": "text"
-    },
-    {
-      "name": "Dummy search",
-      "subtype": "search",
-      "type": "text"
-    },
-    {
-      "name": "Dummy tel",
-      "subtype": "tel",
-      "type": "text"
-    },
-    {
-      "name": "Dummy text",
-      "subtype": "text",
-      "type": "text"
-    },
-    {
-      "name": "Dummy url",
-      "subtype": "url",
-      "type": "text"
-    },
-    {
-      "name": "Dummy url",
-      "subtype": "checkbox",
-      "type": "boolean"
-    },
-    {
-      "name": "Dummy select",
-      "type": "select",
-      "values": [
-        {
-          "key": "key-1",
-          "value": "Value 1"
-        },
-        {
-          "key": "key-2",
-          "value": "Value 2"
-        },
-        {
-          "key": "key-3",
-          "value": "Value 3"
-        },
-        {
-          "key": "key-4",
-          "value": "Value 4"
-        }
-      ]
-    },
-    {
-      "name": "Dummy textarea",
-      "type": "textarea",
-      "rows": 2,
-      "cols": 20
-    },
-    {
-      "name": "Dummy textarea no cols, no rows",
-      "type": "textarea"
-    },
-    {
-      "name": "Dummy radio",
-      "type": "radio",
-      "values": [
-        {
-          "key": "rad1",
-          "value": "Value 1"
-        },
-        {
-          "key": "rad2",
-          "value": "Value 2"
-        }
-      ]
-    },
-    {
-      "name": "Dummy file",
-      "type": "file"
-    },
-    {
-      "name": "Dummy date",
-      "type": "date",
-      "subtype": "date",
-      "min": "2020-10-05",
-      "max": "2020-11-01",
-      "format": "dd. MM. yyyy"
-    },
-    {
-      "name": "Dummy color",
-      "type": "string",
-      "subtype": "color"
-    }
-  ]
+  "form": {
+    "name": "Some Dummy Form",
+    "fields": [
+      {
+        "name": "Dummy email",
+        "subtype": "email",
+        "type": "string"
+      },
+      {
+        "name": "Dummy number",
+        "subtype": "number",
+        "type": "string"
+      },
+      {
+        "name": "Dummy password",
+        "subtype": "password",
+        "type": "string"
+      },
+      {
+        "name": "Dummy search",
+        "subtype": "search",
+        "type": "string"
+      },
+      {
+        "name": "Dummy tel",
+        "subtype": "tel",
+        "type": "string"
+      },
+      {
+        "name": "Dummy text",
+        "subtype": "text",
+        "type": "string"
+      },
+      {
+        "name": "Dummy url",
+        "subtype": "url",
+        "type": "string"
+      },
+      {
+        "name": "Dummy checkbox",
+        "subtype": "checkbox",
+        "type": "boolean"
+      },
+      {
+        "name": "Dummy select",
+        "type": "select",
+        "values": [
+          {
+            "key": "key-1",
+            "value": "Value 1"
+          },
+          {
+            "key": "key-2",
+            "value": "Value 2"
+          },
+          {
+            "key": "key-3",
+            "value": "Value 3"
+          },
+          {
+            "key": "key-4",
+            "value": "Value 4"
+          }
+        ]
+      },
+      {
+        "name": "Dummy textarea",
+        "type": "textarea",
+        "rows": 4,
+        "cols": 20
+      },
+      {
+        "name": "Dummy textarea no cols, no rows",
+        "type": "textarea"
+      },
+      {
+        "name": "Dummy range",
+        "type": "range",
+        "min": 0,
+        "max": 10
+      },
+      {
+        "name": "Dummy radio",
+        "type": "radio",
+        "values": [
+          {
+            "key": "rad1",
+            "value": "Value 1"
+          },
+          {
+            "key": "rad2",
+            "value": "Value 2"
+          }
+        ]
+      },
+      {
+        "name": "Dummy file",
+        "type": "file"
+      },
+      {
+        "name": "Dummy date",
+        "type": "date",
+        "subtype": "date",
+        "min": "2020-10-05",
+        "max": "2020-11-01",
+        "format": "dd. MM. yyyy"
+      },
+      {
+        "name": "Dummy color",
+        "type": "string",
+        "subtype": "color"
+      }
+    ]
+  }
 }
 ```
 

@@ -9,7 +9,10 @@ import TextAreaField from './components/TextAreaField'
 import TextField from './components/TextField'
 import { FieldPropInterface, FormInterface } from './types'
 
-export const Form = ({ fields, submitAction }: FormInterface) => {
+export const Form = ({
+  form: { name, fields },
+  submitAction
+}: FormInterface) => {
   const [payload, setPayload] = useState({})
 
   const handler = (key: string, value: any) => {
@@ -88,7 +91,7 @@ export const Form = ({ fields, submitAction }: FormInterface) => {
 
   return (
     <div>
-      <h1>Form</h1>
+      <h1>{name}</h1>
       <form
         role='form'
         method='post'

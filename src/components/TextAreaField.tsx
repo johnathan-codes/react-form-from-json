@@ -10,14 +10,17 @@ const TextAreaField = ({ name, handler, rows, cols }: TextAreaInterface) => {
   }
 
   return (
-    <div>
-      <label htmlFor={name}>{name}</label>
+    <div className='field-area'>
+      <label htmlFor={name} className='field-area'>
+        {name}
+      </label>
       <textarea
         id={name}
         onChange={handleOnChane}
         value={value}
         rows={rows}
         cols={cols}
+        className='field-area'
       ></textarea>
     </div>
   )

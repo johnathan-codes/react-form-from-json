@@ -10,8 +10,10 @@ const RangeField = ({ name, min, max, handler }: RangeFieldInterface) => {
   }
 
   return (
-    <div>
-      <label htmlFor={name}>{name}</label>
+    <div className='field-range'>
+      <label htmlFor={name} className='field-range'>
+        {name}
+      </label>
       <input
         type='range'
         id={name}
@@ -19,6 +21,7 @@ const RangeField = ({ name, min, max, handler }: RangeFieldInterface) => {
         value={value}
         min={min}
         max={max}
+        className='field-range'
       ></input>
     </div>
   )

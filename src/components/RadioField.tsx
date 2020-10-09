@@ -10,8 +10,8 @@ const RadioField = ({ name, values, handler }: RadioFieldInterface) => {
   }
 
   return (
-    <div>
-      <p>{name}</p>
+    <div className='field-radio'>
+      <p className='field-radio'>{name}</p>
       {values.map((option, index) => {
         return (
           <div key={index}>
@@ -21,8 +21,11 @@ const RadioField = ({ name, values, handler }: RadioFieldInterface) => {
               value={option.key}
               onChange={handleOnClick}
               checked={value === option.key}
+              className='field-radio'
             />
-            <label htmlFor={option.value}>{option.value}</label>
+            <label htmlFor={option.value} className='field-radio'>
+              {option.value}
+            </label>
           </div>
         )
       })}

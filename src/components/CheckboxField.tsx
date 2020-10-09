@@ -12,11 +12,11 @@ const CheckboxField = ({ name, handler }: CheckboxFieldInterface) => {
   }, [checked])
 
   return (
-    <div className='checkbox-inner'>
-      <span className='notice-text'>{name}</span>
+    <div className='field-checkbox'>
+      <label className='field-checkbox'>{name}</label>
       <input
         type='checkbox'
-        className='input-checkbox'
+        className='field-checkbox'
         onChange={handleOnChange}
       />
     </div>

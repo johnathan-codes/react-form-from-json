@@ -10,13 +10,16 @@ const TextField = ({ name, handler, type }: TextFieldInterface) => {
   }
 
   return (
-    <div>
-      <label htmlFor={name}>{name}</label>
+    <div className='field-text'>
+      <label htmlFor={name} className='field-text'>
+        {name}
+      </label>
       <input
         type={type}
         id={name}
         onChange={handleOnChane}
         value={value}
+        className='field-text'
       ></input>
     </div>
   )

@@ -7,8 +7,10 @@ const FileField = ({ name, handler }: FileFieldInterface) => {
   }
 
   return (
-    <div>
-      <label htmlFor={name}>{name}</label>
+    <div className='field-file'>
+      <label htmlFor={name} className='field-file'>
+        {name}
+      </label>
       <input
         type='file'
         id={name}
@@ -17,6 +19,7 @@ const FileField = ({ name, handler }: FileFieldInterface) => {
             onFileChange(e.target.files[0])
           }
         }}
+        className='field-file'
       />
     </div>
   )

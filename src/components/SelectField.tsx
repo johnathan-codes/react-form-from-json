@@ -9,18 +9,25 @@ const SelectField = ({ name, values, handler }: SelectFieldInterface) => {
     handler(name, e.target.value)
   }
   return (
-    <div style={{ width: '150px' }}>
-      <label htmlFor={name}>{name}</label>
+    <div style={{ width: '150px' }} className='field-select'>
+      <label htmlFor={name} className='field-select'>
+        {name}
+      </label>
       <select
         id={name}
         onChange={(e) => {
           handleOnChange(e)
         }}
         value={value}
+        className='field-select'
       >
         {values.map((option) => {
           return (
-            <option value={option.key} key={option.key}>
+            <option
+              value={option.key}
+              key={option.key}
+              className='field-select'
+            >
               {option.value}
             </option>
           )

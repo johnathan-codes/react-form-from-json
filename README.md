@@ -168,6 +168,96 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
 }
 ```
 
+#### CSS (index.css of App)
+
+```css
+.field-text div {
+  width: 1000px;
+}
+.field-text input {
+  height: 1.5vh;
+}
+.field-text label {
+  color: green;
+}
+
+.field-area div {
+  width: 1000px;
+}
+.field-area input {
+  height: 1.5vh;
+}
+.field-area label {
+  color: violet;
+}
+
+.field-select div {
+  width: 1000px;
+}
+.field-select select {
+  height: 1.5vh;
+}
+.field-select option {
+  height: 1.5vh;
+}
+.field-select label {
+  color: brown;
+}
+
+.field-range div {
+  width: 1000px;
+}
+.field-range input {
+  height: 1.5vh;
+}
+.field-range label {
+  color: blanchedalmond;
+}
+
+.field-radio div {
+  width: 100px;
+}
+.field-radio input {
+  height: 1.5vh;
+}
+.field-radio p {
+  color: tomato;
+}
+.field-radio label {
+  color: aquamarine;
+}
+
+.field-file div {
+  width: 1000px;
+}
+.field-file input {
+  height: 1.5vh;
+}
+.field-file label {
+  color: yellowgreen;
+}
+
+.field-date div {
+  width: 1000px;
+}
+.field-date input {
+  height: 1.5vh;
+}
+.field-date label {
+  color: red;
+}
+
+.field-checkbox div {
+  width: 1000px;
+}
+.field-checkbox input {
+  height: 1.5vh;
+}
+.field-checkbox label {
+  color: bisque;
+}
+```
+
 #### Rendered
 
 ![rendered-form](https://user-images.githubusercontent.com/42937562/95061761-52772f80-06fc-11eb-8d62-acc3003eb2fe.png)
@@ -179,6 +269,8 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
 - [x] Change state of field
 - [x] Fill payload
 - [x] Form submit action
+- [x] ClassNames
+- [ ] Custom ClassNames
 - [ ] Default values
 - [ ] Input types
   - [ ] Date inputs
@@ -188,6 +280,8 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
       - [ ] Exclude dates
       - [ ] Include dates
       - [ ] Filter dates
+      - [ ] Higligh dates
+      - [ ]
   - [ ] Selectors
     - [x] Select
     - [x] Checkbox

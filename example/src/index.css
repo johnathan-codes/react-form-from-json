@@ -12,3 +12,89 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.field-text div {
+  width: 1000px;
+}
+.field-text input {
+  height: 1.5vh;
+}
+.field-text label {
+  color: green;
+}
+
+.field-area div {
+  width: 1000px;
+}
+.field-area input {
+  height: 1.5vh;
+}
+.field-area label {
+  color: violet;
+}
+
+.field-select div {
+  width: 1000px;
+}
+.field-select select {
+  height: 1.5vh;
+}
+.field-select option {
+  height: 1.5vh;
+}
+.field-select label {
+  color: brown;
+}
+
+.field-range div {
+  width: 1000px;
+}
+.field-range input {
+  height: 1.5vh;
+}
+.field-range label {
+  color: blanchedalmond;
+}
+
+.field-radio div {
+  width: 100px;
+}
+.field-radio input {
+  height: 1.5vh;
+}
+.field-radio p {
+  color: tomato;
+}
+.field-radio label {
+  color: aquamarine;
+}
+
+.field-file div {
+  width: 1000px;
+}
+.field-file input {
+  height: 1.5vh;
+}
+.field-file label {
+  color: yellowgreen;
+}
+
+.field-date div {
+  width: 1000px;
+}
+.field-date input {
+  height: 1.5vh;
+}
+.field-date label {
+  color: red;
+}
+
+.field-checkbox div {
+  width: 1000px;
+}
+.field-checkbox input {
+  height: 1.5vh;
+}
+.field-checkbox label {
+  color: bisque;
+}

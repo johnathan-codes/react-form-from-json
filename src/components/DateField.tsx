@@ -15,10 +15,11 @@ const DateField = ({ name, min, max, format, handler }: DateFieldInterface) => {
   }, [])
 
   return (
-    <div>
-      <label htmlFor={name}>{name}</label>
+    <div className='field-date'>
+      <label htmlFor={name} className='field-date'>
+        {name}
+      </label>
       <DatePicker
-        locale='sk'
         selected={value}
         onChange={(date: Date) => {
           setValue(date)
@@ -27,6 +28,7 @@ const DateField = ({ name, min, max, format, handler }: DateFieldInterface) => {
         dateFormat={format}
         {...(min !== undefined ? { minDate: new Date(min) } : {})}
         {...(max !== undefined ? { maxDate: new Date(max) } : {})}
+        className='field-date'
       />
     </div>
   )

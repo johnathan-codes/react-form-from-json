@@ -6,7 +6,6 @@ const FileField = ({
   className = 'field-file',
   handler
 }: FileFieldInterface) => {
-  console.log('FileField -> className', className)
   const onFileChange = (e: File) => {
     handler(name, e)
   }

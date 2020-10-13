@@ -323,6 +323,7 @@ or just expand field array before passing it down as props
   - [x] Default ClassNames
   - [x] Custom ClassNames
   - [ ] Global ClassNames
+  - [ ] Styles from file as prop
 - [ ] Default values
 - [ ] Input types
   - [ ] Date inputs

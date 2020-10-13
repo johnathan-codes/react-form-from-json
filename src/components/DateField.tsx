@@ -35,7 +35,6 @@ const DateField = ({
         dateFormat={format}
         {...(min !== undefined ? { minDate: new Date(min) } : {})}
         {...(max !== undefined ? { maxDate: new Date(max) } : {})}
-        className={className}
       />
     </div>
   )

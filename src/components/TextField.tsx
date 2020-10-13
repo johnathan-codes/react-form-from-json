@@ -1,7 +1,12 @@
 import React, { ChangeEvent, useState } from 'react'
 import { TextFieldInterface } from '../types'
 
-const TextField = ({ name, handler, type }: TextFieldInterface) => {
+const TextField = ({
+  name,
+  type,
+  className = 'field-text',
+  handler
+}: TextFieldInterface) => {
   const [value, setValue] = useState('')
 
   const handleOnChane = (e: ChangeEvent<HTMLInputElement>) => {
@@ -10,8 +15,8 @@ const TextField = ({ name, handler, type }: TextFieldInterface) => {
   }
 
   return (
-    <div className='field-text'>
-      <label htmlFor={name} className='field-text'>
+    <div className={className}>
+      <label htmlFor={name} className={className}>
         {name}
       </label>
       <input
@@ -19,7 +24,7 @@ const TextField = ({ name, handler, type }: TextFieldInterface) => {
         id={name}
         onChange={handleOnChane}
         value={value}
-        className='field-text'
+        className={className}
       ></input>
     </div>
   )

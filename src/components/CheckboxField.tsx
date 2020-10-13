@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { CheckboxFieldInterface } from '../types'
 
-const CheckboxField = ({ name, handler }: CheckboxFieldInterface) => {
+const CheckboxField = ({
+  name,
+  className = 'field-checkbox',
+  handler
+}: CheckboxFieldInterface) => {
   const [checked, setChecked] = useState(false)
   const handleOnChange = () => {
     setChecked((prevChecked: boolean) => !prevChecked)
@@ -12,13 +16,9 @@ const CheckboxField = ({ name, handler }: CheckboxFieldInterface) => {
   }, [checked])
 
   return (
-    <div className='field-checkbox'>
-      <label className='field-checkbox'>{name}</label>
-      <input
-        type='checkbox'
-        className='field-checkbox'
-        onChange={handleOnChange}
-      />
+    <div className={className}>
+      <label className={className}>{name}</label>
+      <input type='checkbox' className={className} onChange={handleOnChange} />
     </div>
   )
 }

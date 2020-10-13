@@ -3,7 +3,14 @@ import { DateFieldInterface } from '../types'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 
-const DateField = ({ name, min, max, format, handler }: DateFieldInterface) => {
+const DateField = ({
+  name,
+  min,
+  max,
+  format,
+  className = 'field-date',
+  handler
+}: DateFieldInterface) => {
   const [value, setValue] = useState(new Date())
 
   useEffect(() => {
@@ -15,8 +22,8 @@ const DateField = ({ name, min, max, format, handler }: DateFieldInterface) => {
   }, [])
 
   return (
-    <div className='field-date'>
-      <label htmlFor={name} className='field-date'>
+    <div>
+      <label htmlFor={name} className={className}>
         {name}
       </label>
       <DatePicker
@@ -28,7 +35,7 @@ const DateField = ({ name, min, max, format, handler }: DateFieldInterface) => {
         dateFormat={format}
         {...(min !== undefined ? { minDate: new Date(min) } : {})}
         {...(max !== undefined ? { maxDate: new Date(max) } : {})}
-        className='field-date'
+        className={className}
       />
     </div>
   )

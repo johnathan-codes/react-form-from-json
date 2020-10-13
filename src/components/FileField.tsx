@@ -1,14 +1,19 @@
 import React from 'react'
 import { FileFieldInterface } from '../types'
 
-const FileField = ({ name, handler }: FileFieldInterface) => {
+const FileField = ({
+  name,
+  className = 'field-file',
+  handler
+}: FileFieldInterface) => {
+  console.log('FileField -> className', className)
   const onFileChange = (e: File) => {
     handler(name, e)
   }
 
   return (
-    <div className='field-file'>
-      <label htmlFor={name} className='field-file'>
+    <div className={className}>
+      <label htmlFor={name} className={className}>
         {name}
       </label>
       <input
@@ -19,7 +24,7 @@ const FileField = ({ name, handler }: FileFieldInterface) => {
             onFileChange(e.target.files[0])
           }
         }}
-        className='field-file'
+        className={className}
       />
     </div>
   )

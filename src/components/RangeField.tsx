@@ -1,7 +1,13 @@
 import React, { ChangeEvent, useState } from 'react'
 import { RangeFieldInterface } from '../types'
 
-const RangeField = ({ name, min, max, handler }: RangeFieldInterface) => {
+const RangeField = ({
+  name,
+  min,
+  max,
+  className = 'field-range',
+  handler
+}: RangeFieldInterface) => {
   const [value, setValue] = useState('')
 
   const handleOnChane = (e: ChangeEvent<HTMLInputElement>) => {
@@ -10,8 +16,8 @@ const RangeField = ({ name, min, max, handler }: RangeFieldInterface) => {
   }
 
   return (
-    <div className='field-range'>
-      <label htmlFor={name} className='field-range'>
+    <div className={className}>
+      <label htmlFor={name} className={className}>
         {name}
       </label>
       <input
@@ -21,7 +27,7 @@ const RangeField = ({ name, min, max, handler }: RangeFieldInterface) => {
         value={value}
         min={min}
         max={max}
-        className='field-range'
+        className={className}
       ></input>
     </div>
   )

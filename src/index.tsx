@@ -26,6 +26,7 @@ export const Form = ({ fields, submitAction }: FormInterface) => {
             name={field.name}
             type={field.subtype}
             key={index}
+            className={field.className}
             handler={handler}
           />
         )
@@ -34,8 +35,9 @@ export const Form = ({ fields, submitAction }: FormInterface) => {
           <SelectField
             name={field.name}
             values={field.values}
-            handler={handler}
             key={index}
+            className={field.className}
+            handler={handler}
           />
         )
       case 'textarea':
@@ -44,8 +46,9 @@ export const Form = ({ fields, submitAction }: FormInterface) => {
             name={field.name}
             cols={field.cols}
             rows={field.rows}
-            handler={handler}
             key={index}
+            className={field.className}
+            handler={handler}
           />
         )
       case 'range':
@@ -54,8 +57,9 @@ export const Form = ({ fields, submitAction }: FormInterface) => {
             name={field.name}
             min={field.min}
             max={field.max}
-            handler={handler}
             key={index}
+            className={field.className}
+            handler={handler}
           />
         )
       case 'radio':
@@ -63,8 +67,9 @@ export const Form = ({ fields, submitAction }: FormInterface) => {
           <RadioField
             name={field.name}
             values={field.values}
-            handler={handler}
             key={index}
+            className={field.className}
+            handler={handler}
           />
         )
       case 'file':
@@ -77,8 +82,9 @@ export const Form = ({ fields, submitAction }: FormInterface) => {
             min={field.min}
             max={field.max}
             format={field.format}
-            handler={handler}
             key={index}
+            className={field.className}
+            handler={handler}
           />
         )
       default:

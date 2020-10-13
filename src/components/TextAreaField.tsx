@@ -1,7 +1,13 @@
 import React, { ChangeEvent, useState } from 'react'
 import { TextAreaInterface } from '../types'
 
-const TextAreaField = ({ name, handler, rows, cols }: TextAreaInterface) => {
+const TextAreaField = ({
+  name,
+  rows,
+  cols,
+  className = 'field-area',
+  handler
+}: TextAreaInterface) => {
   const [value, setValue] = useState('')
 
   const handleOnChane = (e: ChangeEvent<HTMLTextAreaElement>) => {
@@ -10,8 +16,8 @@ const TextAreaField = ({ name, handler, rows, cols }: TextAreaInterface) => {
   }
 
   return (
-    <div className='field-area'>
-      <label htmlFor={name} className='field-area'>
+    <div className={className}>
+      <label htmlFor={name} className={className}>
         {name}
       </label>
       <textarea
@@ -20,7 +26,7 @@ const TextAreaField = ({ name, handler, rows, cols }: TextAreaInterface) => {
         value={value}
         rows={rows}
         cols={cols}
-        className='field-area'
+        className={className}
       ></textarea>
     </div>
   )

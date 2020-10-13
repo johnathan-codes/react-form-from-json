@@ -106,7 +106,8 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
       {
         "name": "Dummy checkbox",
         "subtype": "checkbox",
-        "type": "boolean"
+        "type": "boolean",
+        "className": "some dummy class"
       },
       {
         "name": "Dummy select",
@@ -170,7 +171,8 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
         "subtype": "date",
         "min": "2020-10-05",
         "max": "2020-11-01",
-        "format": "dd. MM. yyyy"
+        "format": "dd. MM. yyyy",
+        "className": "some dummy class"
       },
       {
         "name": "Dummy color",
@@ -272,6 +274,21 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
 }
 ```
 
+##### Added custom class names for each field
+
+You can add the class name into the json
+
+```json
+{
+  "name": "Dummy checkbox",
+  "subtype": "checkbox",
+  "type": "boolean",
+  "className": "some dummy class"
+}
+```
+
+or just expand field array before passing it down as props
+
 #### Rendered
 
 ![rendered-form](https://user-images.githubusercontent.com/42937562/95846670-fdff3000-0d4b-11eb-8a6f-71d51d6f9354.png)
@@ -284,7 +301,9 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
 - [x] Fill payload
 - [x] Form submit action
 - [x] ClassNames
-- [ ] Custom ClassNames
+  - [x] Default ClassNames
+  - [ ] Custom ClassNames
+  - [ ] Global ClassNames
 - [ ] Default values
 - [ ] Input types
   - [ ] Date inputs

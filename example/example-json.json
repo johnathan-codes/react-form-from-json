@@ -45,6 +45,7 @@
       {
         "name": "Dummy select",
         "type": "select",
+        "className": "some dummy class",
         "values": [
           {
             "key": "key-1",
@@ -68,7 +69,8 @@
         "name": "Dummy textarea",
         "type": "textarea",
         "rows": 4,
-        "cols": 20
+        "cols": 20,
+        "className": "some dummy class"
       },
       {
         "name": "Dummy textarea no cols, no rows",

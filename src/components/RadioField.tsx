@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
 import { RadioFieldInterface } from '../types'
 
-const RadioField = ({ name, values, handler }: RadioFieldInterface) => {
+const RadioField = ({
+  name,
+  values,
+  className = 'field-radio',
+  handler
+}: RadioFieldInterface) => {
   const [value, setValue] = useState()
 
   const handleOnClick = (e: any) => {
@@ -10,8 +15,8 @@ const RadioField = ({ name, values, handler }: RadioFieldInterface) => {
   }
 
   return (
-    <div className='field-radio'>
-      <p className='field-radio'>{name}</p>
+    <div className={className}>
+      <p className={className}>{name}</p>
       {values.map((option, index) => {
         return (
           <div key={index}>
@@ -21,9 +26,9 @@ const RadioField = ({ name, values, handler }: RadioFieldInterface) => {
               value={option.key}
               onChange={handleOnClick}
               checked={value === option.key}
-              className='field-radio'
+              className={className}
             />
-            <label htmlFor={option.value} className='field-radio'>
+            <label htmlFor={option.value} className={className}>
               {option.value}
             </label>
           </div>

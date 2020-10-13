@@ -49,7 +49,8 @@ const App = () => {
     console.log('HandleSubmit -> payload', payload)
   }
 
-  return <Form form={form} submitAction={handleSubmit} />
+  return <div id="form">
+    <Form fields={form.fields} submitAction={handleSubmit} />
 }
 
 export default App
@@ -63,6 +64,7 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
 
 ```json
 {
+  ...some other properties,
   "form": {
     "name": "Some Dummy Form",
     "fields": [
@@ -272,7 +274,7 @@ Full example json is in [`example\example-json.json`](https://github.com/johnath
 
 #### Rendered
 
-![rendered-form](https://user-images.githubusercontent.com/42937562/95061761-52772f80-06fc-11eb-8d62-acc3003eb2fe.png)
+![rendered-form](https://user-images.githubusercontent.com/42937562/95846670-fdff3000-0d4b-11eb-8a6f-71d51d6f9354.png)
 
 ## Roadmap
 

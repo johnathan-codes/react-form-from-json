@@ -26,7 +26,12 @@ const App = () => {
     })
   }, [])
 
-  return <Form form={form} submitAction={handleSubmit} />
+  return (
+    <div>
+      <legend>{form.name}</legend>
+      <Form fields={form.fields} submitAction={handleSubmit} />
+    </div>
+  )
 }
 
 export default App

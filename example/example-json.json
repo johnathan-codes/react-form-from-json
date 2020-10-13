@@ -1,6 +1,6 @@
 {
   "form": {
-    "name": "Some Dummy Form",
+    "name": "Dummy form name",
     "fields": [
       {
         "name": "Dummy email",

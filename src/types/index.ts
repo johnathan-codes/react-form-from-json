@@ -1,8 +1,5 @@
 export interface FormInterface {
-  form: {
-    name: string
-    fields: FieldPropInterface[]
-  }
+  fields: FieldPropInterface[]
   submitAction: Function
 }
 

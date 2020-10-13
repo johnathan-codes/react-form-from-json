@@ -9,18 +9,30 @@ import TextAreaField from './components/TextAreaField'
 import TextField from './components/TextField'
 import { FieldPropInterface, FormInterface } from './types'
 
-export const Form = ({ fields, handler }: FormInterface) => {
+export const Form = ({
+  fields,
+  handler,
+  displayUnder = true
+}: FormInterface) => {
   const fieldSelector = (field: FieldPropInterface, index: number) => {
     switch (field.type) {
       case 'boolean':
-        return <CheckboxField name={field.name} key={index} handler={handler} />
+        return (
+          <CheckboxField
+            name={field.name}
+            displayUnder={displayUnder}
+            key={index}
+            handler={handler}
+          />
+        )
       case 'string':
         return (
           <TextField
             name={field.name}
             type={field.subtype}
-            key={index}
             className={field.className}
+            displayUnder={displayUnder}
+            key={index}
             handler={handler}
           />
         )
@@ -29,8 +41,9 @@ export const Form = ({ fields, handler }: FormInterface) => {
           <SelectField
             name={field.name}
             values={field.values}
-            key={index}
             className={field.className}
+            displayUnder={displayUnder}
+            key={index}
             handler={handler}
           />
         )
@@ -40,8 +53,9 @@ export const Form = ({ fields, handler }: FormInterface) => {
             name={field.name}
             cols={field.cols}
             rows={field.rows}
-            key={index}
             className={field.className}
+            displayUnder={displayUnder}
+            key={index}
             handler={handler}
           />
         )
@@ -51,8 +65,9 @@ export const Form = ({ fields, handler }: FormInterface) => {
             name={field.name}
             min={field.min}
             max={field.max}
-            key={index}
             className={field.className}
+            displayUnder={displayUnder}
+            key={index}
             handler={handler}
           />
         )
@@ -61,13 +76,21 @@ export const Form = ({ fields, handler }: FormInterface) => {
           <RadioField
             name={field.name}
             values={field.values}
-            key={index}
             className={field.className}
+            displayUnder={displayUnder}
+            key={index}
             handler={handler}
           />
         )
       case 'file':
-        return <FileField name={field.name} handler={handler} key={index} />
+        return (
+          <FileField
+            name={field.name}
+            displayUnder={displayUnder}
+            key={index}
+            handler={handler}
+          />
+        )
       case 'date':
         return (
           <DateField
@@ -76,8 +99,9 @@ export const Form = ({ fields, handler }: FormInterface) => {
             min={field.min}
             max={field.max}
             format={field.format}
-            key={index}
             className={field.className}
+            displayUnder={displayUnder}
+            key={index}
             handler={handler}
           />
         )

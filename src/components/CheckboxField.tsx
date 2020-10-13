@@ -4,6 +4,7 @@ import { CheckboxFieldInterface } from '../types'
 const CheckboxField = ({
   name,
   className = 'field-checkbox',
+  displayUnder,
   handler
 }: CheckboxFieldInterface) => {
   const [checked, setChecked] = useState(false)
@@ -17,8 +18,9 @@ const CheckboxField = ({
 
   return (
     <div className={className}>
-      <label className={className}>{name}</label>
       <input type='checkbox' className={className} onChange={handleOnChange} />
+      {displayUnder && <br />}
+      <label className={className}>{name}</label>
     </div>
   )
 }

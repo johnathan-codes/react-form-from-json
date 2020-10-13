@@ -23,6 +23,12 @@ In root run with concurrently (which is installed globally `npm i -g concurrentl
 
 ## Usage
 
+#### Form properties
+
+- `handler` -> Each field has handler prop, which defines what to do with input (see example app `handleInput`)
+- `fields` -> An array of fields, which will be rendered in the application
+- `displayUnder` -> Whether or not should fields be rendered next to the labels, if `true` field will be rendere under the label (see `Rendered` section), `true` by default
+
 #### Example code with axios request (response json shown below)
 
 ```tsx
@@ -65,7 +71,7 @@ const App = () => {
         }}
       >
         <legend>{form.name}</legend>
-        <Form fields={form.fields} handler={handleInput} />
+        <Form fields={form.fields} handler={handleInput} displayUnder={true} />
         <button type='submit'>Submit</button>
       </form>
     </div>
@@ -312,6 +318,9 @@ or just expand field array before passing it down as props
 
 ![rendered-form](https://user-images.githubusercontent.com/42937562/95846670-fdff3000-0d4b-11eb-8a6f-71d51d6f9354.png)
 
+When `displayUnder` prop is true
+![displayUnder](https://user-images.githubusercontent.com/42937562/95868460-842a6f00-0d6a-11eb-933a-ab941f7235f2.png)
+
 ## Roadmap
 
 - [ ] ~~Arrays~~
@@ -338,7 +347,7 @@ or just expand field array before passing it down as props
   - [ ] Selectors
     - [x] Select
     - [x] Checkbox
-    - [ ] Color
+    - [x] Color
     - [x] File
     - [x] Radio
     - [ ] Range
@@ -357,11 +366,16 @@ or just expand field array before passing it down as props
     - [ ] ~~Hidden~~
     - [ ] ~~Reset~~
     - [ ] ~~Submit~~
-- [ ] (Optional) Validators
-  - [ ] Email
-  - [ ] Tel
-  - [ ] Password
-  - [ ] Number
+- [ ] Validators - regex from json parameter
+
+```json
+{
+  "name": "Email field",
+  "subtype": "email",
+  "type": "string",
+  "validator": "/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i"
+},
+```
 
 ## License
 

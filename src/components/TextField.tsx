@@ -5,6 +5,7 @@ const TextField = ({
   name,
   type,
   className = 'field-text',
+  displayUnder,
   handler
 }: TextFieldInterface) => {
   const [value, setValue] = useState('')
@@ -19,6 +20,7 @@ const TextField = ({
       <label htmlFor={name} className={className}>
         {name}
       </label>
+      {displayUnder && <br />}
       <input
         type={type}
         id={name}

@@ -43,7 +43,7 @@ const App = () => {
         }}
       >
         <legend>{form.name}</legend>
-        <Form fields={form.fields} handler={handleInput} />
+        <Form fields={form.fields} handler={handleInput} displayUnder={true} />
         <button type='submit'>Submit</button>
       </form>
     </div>

@@ -1,46 +1,41 @@
 export interface FormInterface {
   fields: FieldPropInterface[]
+  displayUnder?: boolean
   handler: Function
 }
 
 export type FieldPropInterface = {
   name: string
+  className?: string
 } & (
   | {
       type: 'string'
       subtype: string
-      className?: string
     }
   | {
       type: 'boolean'
       subtype: 'checkbox'
-      className?: string
     }
   | {
       type: 'select'
       values: SelectValue[]
-      className?: string
     }
   | {
       type: 'textarea'
       rows?: number
       cols?: number
-      className?: string
     }
   | {
       type: 'range'
       min: number
       max: number
-      className: string
     }
   | {
       type: 'radio'
       values: SelectValue[]
-      className?: string
     }
   | {
       type: 'file'
-      className?: string
     }
   | {
       type: 'date'
@@ -48,7 +43,6 @@ export type FieldPropInterface = {
       min?: string
       max?: string
       format: string
-      className?: string
     }
 )
 
@@ -56,12 +50,14 @@ export interface TextFieldInterface {
   name: string
   type: string
   className?: string
+  displayUnder?: boolean
   handler: Function
 }
 
 export interface CheckboxFieldInterface {
   name: string
   className?: string
+  displayUnder?: boolean
   handler: Function
 }
 
@@ -70,6 +66,7 @@ export interface RangeFieldInterface {
   min: number
   max: number
   className?: string
+  displayUnder?: boolean
   handler: Function
 }
 
@@ -77,12 +74,14 @@ export interface RadioFieldInterface {
   name: string
   values: SelectValue[]
   className?: string
+  displayUnder?: boolean
   handler: Function
 }
 
 export interface FileFieldInterface {
   name: string
   className?: string
+  displayUnder?: boolean
   handler: Function
 }
 
@@ -91,6 +90,7 @@ export interface TextAreaInterface {
   rows?: number
   cols?: number
   className?: string
+  displayUnder?: boolean
   handler: Function
 }
 
@@ -101,6 +101,7 @@ export interface DateFieldInterface {
   max?: string
   format?: string
   className?: string
+  displayUnder: boolean
   handler: Function
 }
 
@@ -108,6 +109,7 @@ export interface SelectFieldInterface {
   name: string
   values: SelectValue[]
   className?: string
+  displayUnder?: boolean
   handler: Function
 }
 

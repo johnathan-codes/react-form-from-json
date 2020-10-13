@@ -5,6 +5,7 @@ const SelectField = ({
   name,
   values,
   className = 'field-select',
+  displayUnder,
   handler
 }: SelectFieldInterface) => {
   const [value, setValue] = useState<string>(values[0].key)
@@ -18,6 +19,7 @@ const SelectField = ({
       <label htmlFor={name} className={className}>
         {name}
       </label>
+      {displayUnder && <br />}
       <select
         id={name}
         onChange={(e) => {

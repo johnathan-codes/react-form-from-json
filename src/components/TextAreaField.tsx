@@ -6,6 +6,7 @@ const TextAreaField = ({
   rows,
   cols,
   className = 'field-area',
+  displayUnder,
   handler
 }: TextAreaInterface) => {
   const [value, setValue] = useState('')
@@ -20,6 +21,7 @@ const TextAreaField = ({
       <label htmlFor={name} className={className}>
         {name}
       </label>
+      {displayUnder && <br />}
       <textarea
         id={name}
         onChange={handleOnChane}

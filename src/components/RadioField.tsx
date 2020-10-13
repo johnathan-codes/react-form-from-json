@@ -5,6 +5,7 @@ const RadioField = ({
   name,
   values,
   className = 'field-radio',
+  displayUnder,
   handler
 }: RadioFieldInterface) => {
   const [value, setValue] = useState()
@@ -17,6 +18,7 @@ const RadioField = ({
   return (
     <div className={className}>
       <p className={className}>{name}</p>
+      {displayUnder && <br />}
       {values.map((option, index) => {
         return (
           <div key={index}>

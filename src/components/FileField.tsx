@@ -4,6 +4,7 @@ import { FileFieldInterface } from '../types'
 const FileField = ({
   name,
   className = 'field-file',
+  displayUnder,
   handler
 }: FileFieldInterface) => {
   const onFileChange = (e: File) => {
@@ -15,6 +16,7 @@ const FileField = ({
       <label htmlFor={name} className={className}>
         {name}
       </label>
+      {displayUnder && <br />}
       <input
         type='file'
         id={name}

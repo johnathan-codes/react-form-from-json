@@ -1,6 +1,6 @@
 {
   "name": "react-form-from-json",
-  "version": "1.4.2",
+  "version": "1.4.4",
   "description": "Create dynamic forms from json config file",
   "author": "johnathan-codes",
   "license": "MIT",

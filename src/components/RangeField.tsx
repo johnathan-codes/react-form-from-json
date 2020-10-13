@@ -6,6 +6,7 @@ const RangeField = ({
   min,
   max,
   className = 'field-range',
+  displayUnder,
   handler
 }: RangeFieldInterface) => {
   const [value, setValue] = useState('')
@@ -20,6 +21,7 @@ const RangeField = ({
       <label htmlFor={name} className={className}>
         {name}
       </label>
+      {displayUnder && <br />}
       <input
         type='range'
         id={name}

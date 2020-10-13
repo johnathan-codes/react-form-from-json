@@ -8,6 +8,7 @@ const DateField = ({
   min,
   max,
   format,
+  displayUnder,
   className = 'field-date',
   handler
 }: DateFieldInterface) => {
@@ -26,6 +27,7 @@ const DateField = ({
       <label htmlFor={name} className={className}>
         {name}
       </label>
+      {displayUnder && <br />}
       <DatePicker
         selected={value}
         onChange={(date: Date) => {

@@ -1,6 +1,6 @@
 export interface FormInterface {
   fields: FieldPropInterface[]
-  submitAction: Function
+  handler: Function
 }
 
 export type FieldPropInterface = {

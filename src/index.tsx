@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from 'react'
+import React from 'react'
 import CheckboxField from './components/CheckboxField'
 import DateField from './components/DateField'
 import FileField from './components/FileField'
@@ -9,13 +9,7 @@ import TextAreaField from './components/TextAreaField'
 import TextField from './components/TextField'
 import { FieldPropInterface, FormInterface } from './types'
 
-export const Form = ({ fields, submitAction }: FormInterface) => {
-  const [payload, setPayload] = useState({})
-
-  const handler = (key: string, value: any) => {
-    setPayload((prevPayload) => ({ ...prevPayload, [key]: value }))
-  }
-
+export const Form = ({ fields, handler }: FormInterface) => {
   const fieldSelector = (field: FieldPropInterface, index: number) => {
     switch (field.type) {
       case 'boolean':
@@ -94,21 +88,10 @@ export const Form = ({ fields, submitAction }: FormInterface) => {
 
   return (
     <div>
-      <form
-        role='form'
-        method='post'
-        id='generated-form'
-        onSubmit={(e: FormEvent<HTMLFormElement>) => {
-          e.preventDefault()
-          submitAction(e, payload)
-        }}
-      >
-        {fields.length !== 0 &&
-          fields.map((field: any, index: number) => {
-            return fieldSelector(field, index)
-          })}
-        <button type='submit'>Submit</button>
-      </form>
+      {fields.length !== 0 &&
+        fields.map((field: any, index: number) => {
+          return fieldSelector(field, index)
+        })}
     </div>
   )
 }

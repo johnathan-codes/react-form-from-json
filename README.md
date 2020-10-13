@@ -26,31 +26,50 @@ In root run with concurrently (which is installed globally `npm i -g concurrentl
 #### Example code with axios request (response json shown below)
 
 ```tsx
-import React, { useEffect, useState } from 'react'
-import { url } from './helpers'
-import get from 'axios'
+import React, { FormEvent, useEffect, useState } from 'react'
 import { Form } from 'react-form-from-json'
+import get from 'axios'
 
 const App = () => {
+  const [payload, setPayload] = useState({})
   const [form, setForm] = useState({
     name: '',
     fields: []
   })
+
+  const handleInput = (key: string, value: any) => {
+    setPayload((prevPayload) => ({ ...prevPayload, [key]: value }))
+  }
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    //Submit Action
+  }
+
   useEffect(() => {
-    get(url, {
+    get('http://localhost:3100/form', {
       method: 'GET'
     }).then((res: any) => {
-      setFields(res.data)
+      setForm(res.data)
     })
   }, [])
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>, payload: {}) => {
-    e.preventDefault()
-    console.log('HandleSubmit -> payload', payload)
-  }
-
-  return <div id="form">
-    <Form fields={form.fields} submitAction={handleSubmit} />
+  return (
+    <div>
+      <form
+        method='post'
+        id='generated-form'
+        onSubmit={(e: FormEvent<HTMLFormElement>) => {
+          e.preventDefault()
+          handleSubmit(e)
+        }}
+      >
+        <legend>{form.name}</legend>
+        <Form fields={form.fields} handler={handleInput} />
+        <button type='submit'>Submit</button>
+      </form>
+    </div>
+  )
 }
 
 export default App

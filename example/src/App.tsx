@@ -3,12 +3,18 @@ import { Form } from 'react-form-from-json'
 import get from 'axios'
 
 const App = () => {
+  const [payload, setPayload] = useState({})
+  console.log('App -> payload', payload)
   const [form, setForm] = useState({
     name: '',
     fields: []
   })
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>, payload: {}) => {
+  const handleInput = (key: string, value: any) => {
+    setPayload((prevPayload) => ({ ...prevPayload, [key]: value }))
+  }
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     console.log('HandleSubmit -> payload', payload)
     //FIY Create new form data
@@ -28,8 +34,18 @@ const App = () => {
 
   return (
     <div>
-      <legend>{form.name}</legend>
-      <Form fields={form.fields} submitAction={handleSubmit} />
+      <form
+        method='post'
+        id='generated-form'
+        onSubmit={(e: FormEvent<HTMLFormElement>) => {
+          e.preventDefault()
+          handleSubmit(e)
+        }}
+      >
+        <legend>{form.name}</legend>
+        <Form fields={form.fields} handler={handleInput} />
+        <button type='submit'>Submit</button>
+      </form>
     </div>
   )
 }

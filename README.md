@@ -321,7 +321,7 @@ or just expand field array before passing it down as props
 - [x] Form submit action
 - [x] ClassNames
   - [x] Default ClassNames
-  - [ ] Custom ClassNames
+  - [x] Custom ClassNames
   - [ ] Global ClassNames
 - [ ] Default values
 - [ ] Input types

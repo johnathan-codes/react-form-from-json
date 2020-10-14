@@ -15,7 +15,7 @@ const SelectField = ({
     handler(name, e.target.value)
   }
   return (
-    <div style={{ width: '150px' }} className={className}>
+    <div className={className}>
       <label htmlFor={name} className={className}>
         {name}
       </label>

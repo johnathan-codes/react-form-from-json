@@ -319,6 +319,7 @@ or just expand field array before passing it down as props
 ![rendered-form](https://user-images.githubusercontent.com/42937562/95846670-fdff3000-0d4b-11eb-8a6f-71d51d6f9354.png)
 
 When `displayUnder` prop is true
+
 ![displayUnder](https://user-images.githubusercontent.com/42937562/95868460-842a6f00-0d6a-11eb-933a-ab941f7235f2.png)
 
 ## Roadmap

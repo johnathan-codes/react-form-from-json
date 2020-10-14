@@ -57,7 +57,6 @@ export interface TextFieldInterface {
 export interface CheckboxFieldInterface {
   name: string
   className?: string
-  displayUnder?: boolean
   handler: Function
 }
 

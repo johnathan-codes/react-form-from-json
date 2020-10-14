@@ -330,8 +330,8 @@ When `displayUnder` prop is true
 - [x] Form submit action
 - [x] ClassNames
   - [x] Default ClassNames
-  - [x] Custom ClassNames
-  - [ ] Global ClassNames
+  - [ ] Custom ClassNames for each field
+  - [x] Global ClassNames
   - [ ] Styles from file as prop
 - [ ] Default values
 - [ ] Input types
@@ -343,7 +343,6 @@ When `displayUnder` prop is true
       - [ ] Include dates
       - [ ] Filter dates
       - [ ] Higligh dates
-      - [ ]
   - [ ] Selectors
     - [x] Select
     - [x] Checkbox

@@ -17,14 +17,7 @@ export const Form = ({
   const fieldSelector = (field: FieldPropInterface, index: number) => {
     switch (field.type) {
       case 'boolean':
-        return (
-          <CheckboxField
-            name={field.name}
-            displayUnder={displayUnder}
-            key={index}
-            handler={handler}
-          />
-        )
+        return <CheckboxField name={field.name} key={index} handler={handler} />
       case 'string':
         return (
           <TextField

@@ -348,6 +348,7 @@ When `displayUnder` prop is true
     - [x] Checkbox
     - [x] Color
     - [x] File
+      - [ ] Multiple files
     - [x] Radio
     - [ ] Range
       - [x] Min - Max
